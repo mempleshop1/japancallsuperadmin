@@ -1,15 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom";
+import "antd/dist/antd.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import Router from "./router";
+import reportWebVitals from "./reportWebVitals";
+import axios from "axios";
+
+axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.baseURL = "https://japancallrouting.herokuapp.com/";
+
+const App = () => (
+    <BrowserRouter>
+        <Router />
+    </BrowserRouter>
 );
+
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
