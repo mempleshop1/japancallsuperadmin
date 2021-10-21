@@ -256,8 +256,8 @@ const Dashboard = (props) => {
                                     <Col span={6}>{admin.password}</Col>
                                     <Col span={6}>
                                         {admin.callactive
-                                            ? "Active"
-                                            : "Inactive"}
+                                            ? "On Call"
+                                            : "Not On Call"}
                                         <Button
                                             size="small"
                                             style={{ marginLeft: "5px" }}
